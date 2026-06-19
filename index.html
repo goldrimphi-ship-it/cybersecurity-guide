@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Cybersecurity Career Starter 2026 — Zero to Hired in South Africa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--navy:#080E1C;--card:#0D1929;--mid:#112035;--cyan:#00B4D8;--cyan2:#0096B8;--ice:#E2F4F8;--muted:#7BAABB;--border:rgba(0,180,216,0.18);--glow:0 0 32px rgba(0,180,216,0.22)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--ice);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,180,216,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,216,0.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+.content{position:relative;z-index:1}
+.display{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em}
+.headline{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:700;line-height:1.2;letter-spacing:-0.02em}
+.label{font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--cyan)}
+.cyan{color:var(--cyan)}.muted{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color 0.2s,box-shadow 0.2s}
+.card:hover{border-color:rgba(0,180,216,0.4);box-shadow:var(--glow)}
+.terminal{background:#050B14;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;font-family:'Cascadia Code','Fira Code','Courier New',monospace;font-size:0.88rem}
+.terminal-bar{display:flex;gap:6px;margin-bottom:1rem}
+.dot{width:11px;height:11px;border-radius:50%}
+.dot-r{background:#FF5F57}.dot-y{background:#FFBD2E}.dot-g{background:#28CA41}
+.terminal-line{margin:4px 0;min-height:1.2em}
+.prompt{color:var(--cyan)}.output{color:#8BAC94}
+.cursor{display:inline-block;width:8px;height:1em;background:var(--cyan);vertical-align:text-bottom;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.btn-buy{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--cyan);color:#080E1C;font-weight:800;font-size:1.05rem;padding:1rem 2.4rem;border-radius:8px;border:none;cursor:pointer;text-decoration:none;transition:background 0.18s,transform 0.15s,box-shadow 0.18s;box-shadow:0 4px 24px rgba(0,180,216,0.35);white-space:nowrap}
+.btn-buy:hover{background:#22D0F0;transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,180,216,0.5)}
+.btn-buy:active{transform:translateY(0)}
+#sticky-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(8,14,28,0.96);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:0.85rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:100;transform:translateY(100%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1)}
+#sticky-bar.visible{transform:translateY(0)}
+.phase-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;position:relative;overflow:hidden}
+.phase-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--cyan)}
+.phase-num{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;color:var(--cyan);margin-bottom:0.4rem}
+.salary-row{display:flex;align-items:center;padding:0.85rem 1rem;border-bottom:1px solid rgba(0,180,216,0.1);gap:1rem}
+.salary-row:last-child{border-bottom:none}
+.salary-bar-wrap{flex:1;background:rgba(0,180,216,0.08);border-radius:4px;height:6px;overflow:hidden}
+.salary-bar{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--cyan2),var(--cyan));transition:width 1.2s cubic-bezier(0.4,0,0.2,1);width:0}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;padding:1.1rem 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--ice);font-size:1rem;font-weight:600;gap:1rem}
+.faq-icon{flex-shrink:0;width:22px;height:22px;border:1.5px solid var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:14px;transition:transform 0.25s,background 0.2s}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--cyan);color:#080E1C}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.25s;color:var(--muted);font-size:0.95rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1.1rem}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:none}
+.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
+.highlight{background:rgba(0,180,216,0.07);border:1px solid rgba(0,180,216,0.25);border-radius:10px;padding:1.5rem}
+@media(max-width:640px){.display{font-size:2.2rem}.btn-buy{font-size:0.95rem;padding:0.9rem 1.6rem}}
+@media(prefers-reduced-motion:reduce){.reveal,.salary-bar,.btn-buy{transition:none}.cursor{animation:none;opacity:1}}
+</style>
+</head>
+<body>
+<div class="content">
+
+<section style="min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:6rem 1.5rem 4rem">
+<div style="max-width:960px;margin:0 auto;width:100%">
+<p class="label" style="margin-bottom:1.25rem">Cybersecurity Career Starter 2026</p>
+<h1 class="display" style="margin-bottom:1.25rem">Zero to Hired<br/><span class="cyan">in South Africa.</span></h1>
+<p style="font-size:1.18rem;color:var(--muted);max-width:560px;margin-bottom:2.5rem;line-height:1.7">The complete step-by-step roadmap for complete beginners — no degree, no experience, no R5,000 bootcamp required.</p>
+<div class="terminal" style="max-width:540px;margin-bottom:2.75rem">
+<div class="terminal-bar"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+<div class="terminal-line"><span class="prompt">$ </span><span class="output" id="t-line1"></span></div>
+<div class="terminal-line"><span class="prompt" id="t-p2" style="display:none">$ </span><span class="output" id="t-line2"></span></div>
+<div class="terminal-line"><span class="prompt" id="t-p3" style="display:none">$ </span><span class="output" id="t-line3"></span></div>
+<div class="terminal-line" id="t-cursor-line" style="display:none"><span class="prompt">$ </span><span class="cursor"></span></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center">
+<a data-gumroad-action="buy" class="btn-buy">Get the guide — $9 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<p style="font-size:0.85rem;color:var(--muted)">Instant PDF download &nbsp;·&nbsp; R165 &nbsp;·&nbsp; No subscription</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:2rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border)">
+<div><p style="font-size:1.8rem;font-weight:800;color:var(--cyan)">34</p><p style="font-size:0.82rem;color:var(--muted)">Pages of actionable content</p></div>
+<div><p style="font-size:1.8rem;font-weight:800;color:var(--cyan)">6</p><p style="font-size:0.82rem;color:var(--muted)">Phase structured roadmap</p></div>
+<div><p style="font-size:1.8rem;font-weight:800;color:var(--cyan)">30</p><p style="font-size:0.82rem;color:var(--muted)">Day-by-day study planner</p></div>
+<div><p style="font-size:1.8rem;font-weight:800;color:var(--cyan)">R0</p><p style="font-size:0.82rem;color:var(--muted)">Most resources cost nothing</p></div>
+</div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section style="padding:4rem 1.5rem" class="reveal">
+<div style="max-width:960px;margin:0 auto">
+<div class="highlight">
+<p class="label" style="margin-bottom:0.75rem">The South African Skills Crisis</p>
+<p class="headline" style="margin-bottom:1rem">Companies are <span class="cyan">desperate</span> to hire.<br/>The gap is your opportunity.</p>
+<p style="color:var(--muted);max-width:640px;font-size:1rem">Banks, hospitals, government departments, and businesses across Gauteng are under constant threat from ransomware and phishing — and they cannot fill the roles fast enough. Entry-level salaries start at <strong style="color:var(--ice)">R15,000–R30,000 per month</strong>. Senior specialists earn <strong style="color:var(--cyan)">R120,000–R200,000+</strong>. That demand is your door — this guide is the key.</p>
+</div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section style="padding:5rem 1.5rem" class="reveal">
+<div style="max-width:960px;margin:0 auto">
+<p class="label" style="margin-bottom:0.75rem">What's inside</p>
+<h2 class="headline" style="margin-bottom:0.5rem">Everything you need. Nothing you don't.</h2>
+<p style="color:var(--muted);margin-bottom:3rem;font-size:0.97rem">Built specifically for the South African market — not a recycled American guide.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">🗺️</p><p style="font-weight:700;margin-bottom:0.35rem">6-Phase Roadmap</p><p style="color:var(--muted);font-size:0.9rem">A clear, sequential path from zero to job-ready. Follow in order — no guesswork, no random YouTube rabbit holes.</p></div>
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">📅</p><p style="font-weight:700;margin-bottom:0.35rem">30-Day Study Planner</p><p style="color:var(--muted);font-size:0.9rem">Not vague weekly goals — a day-by-day plan with the exact task, resource, and time for every single day of Month 1.</p></div>
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">🎓</p><p style="font-weight:700;margin-bottom:0.35rem">Certification Path</p><p style="color:var(--muted);font-size:0.9rem">Google CC to Security+ — with 2026 SA pricing, self-study tips, and online proctoring options for all SA cities.</p></div>
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">💰</p><p style="font-weight:700;margin-bottom:0.35rem">Real SA Salary Data</p><p style="color:var(--muted);font-size:0.9rem">Verified 2026 benchmarks from Gauteng, Western Cape, and KZN — not American figures converted to rands.</p></div>
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">🛠️</p><p style="font-weight:700;margin-bottom:0.35rem">Free Practice Platforms</p><p style="color:var(--muted);font-size:0.9rem">TryHackMe, HackTheBox, VulnHub (offline during load shedding), OverTheWire — all free, all ranked by where to start.</p></div>
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">📋</p><p style="font-weight:700;margin-bottom:0.35rem">CV and Interview Prep</p><p style="color:var(--muted);font-size:0.9rem">What SA employers actually look at, the 8 questions you WILL be asked, and how to answer them to stand out.</p></div>
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">⚖️</p><p style="font-weight:700;margin-bottom:0.35rem">SA Legal Context</p><p style="color:var(--muted);font-size:0.9rem">POPIA, Cybercrimes Act 19 of 2020 — context international guides miss but SA employers ask about in interviews.</p></div>
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">🌍</p><p style="font-weight:700;margin-bottom:0.35rem">SA Community and Events</p><p style="color:var(--muted);font-size:0.9rem">BSides Cape Town, 2600 SA, ISACA, CSIR internships — the local network most guides don't even know exists.</p></div>
+<div class="card"><p style="font-size:1.4rem;margin-bottom:0.6rem">📖</p><p style="font-weight:700;margin-bottom:0.35rem">25-Term Glossary</p><p style="color:var(--muted);font-size:0.9rem">CIA Triad, SOC, SIEM, POPIA, CTF — every term you'll meet in study and in SA job interviews, defined clearly.</p></div>
+</div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section style="padding:5rem 1.5rem" class="reveal">
+<div style="max-width:960px;margin:0 auto">
+<p class="label" style="margin-bottom:0.75rem">The Roadmap</p>
+<h2 class="headline" style="margin-bottom:0.5rem">6 phases. 6–12 months. One career.</h2>
+<p style="color:var(--muted);margin-bottom:3rem;font-size:0.97rem">Each phase builds on the previous. Follow in order — don't skip Phase 1.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem">
+<div class="phase-card"><p class="phase-num">PHASE 1 — WEEKS 1–4</p><p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem">Build Strong Foundations</p><p style="color:var(--muted);font-size:0.88rem">Windows, Linux, command line. VirtualBox, Ubuntu, Kali Linux. The terminal becomes your superpower.</p></div>
+<div class="phase-card"><p class="phase-num">PHASE 2 — WEEKS 5–8</p><p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem">Master Networking Basics</p><p style="color:var(--muted);font-size:0.88rem">TCP/IP, ports, firewalls, Wireshark traffic analysis. SA bank interviewers ask this — most candidates fail it.</p></div>
+<div class="phase-card"><p class="phase-num">PHASE 3 — WEEKS 9–12</p><p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem">Core Cybersecurity Concepts</p><p style="color:var(--muted);font-size:0.88rem">CIA Triad, threats, encryption, MFA, POPIA compliance. Think like a security professional, not a user.</p></div>
+<div class="phase-card"><p class="phase-num">PHASE 4 — MONTHS 3–5</p><p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem">Hands-On Practice</p><p style="color:var(--muted);font-size:0.88rem">TryHackMe, HackTheBox, CTFs, Kali Linux home lab, GitHub portfolio. Where real skills are built.</p></div>
+<div class="phase-card"><p class="phase-num">PHASE 5 — MONTHS 3–6</p><p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem">Get Certified</p><p style="color:var(--muted);font-size:0.88rem">Google CC (free) → ISC2 CC ($199) → CompTIA Security+ (R7,500–R9,000). Self-study, then book Pearson VUE or online.</p></div>
+<div class="phase-card"><p class="phase-num">PHASE 6 — MONTHS 6–12</p><p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem">Land Your First Job</p><p style="color:var(--muted);font-size:0.88rem">Portfolio, CV, LinkedIn, where to apply in SA, community networking, interview preparation. Your job offer.</p></div>
+</div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section style="padding:5rem 1.5rem" class="reveal" id="salary-section">
+<div style="max-width:720px;margin:0 auto">
+<p class="label" style="margin-bottom:0.75rem">Real 2026 Numbers</p>
+<h2 class="headline" style="margin-bottom:0.5rem">What the career actually pays in SA</h2>
+<p style="color:var(--muted);margin-bottom:2.5rem;font-size:0.97rem">Across Gauteng, Western Cape, and KwaZulu-Natal. Real advertised roles, not outliers.</p>
+<div class="card" style="padding:0;overflow:hidden">
+<div class="salary-row"><div style="min-width:220px"><p style="font-size:0.82rem;color:var(--muted)">IT Helpdesk / Support</p><p style="font-weight:700;font-size:0.95rem;color:var(--cyan)">R10,000 – R18,000<span style="font-size:0.75rem;font-weight:400;color:var(--muted)">/mo</span></p></div><div class="salary-bar-wrap"><div class="salary-bar" data-width="14%"></div></div></div>
+<div class="salary-row"><div style="min-width:220px"><p style="font-size:0.82rem;color:var(--muted)">SOC Analyst (Junior)</p><p style="font-weight:700;font-size:0.95rem;color:var(--cyan)">R18,000 – R35,000<span style="font-size:0.75rem;font-weight:400;color:var(--muted)">/mo</span></p></div><div class="salary-bar-wrap"><div class="salary-bar" data-width="26%"></div></div></div>
+<div class="salary-row"><div style="min-width:220px"><p style="font-size:0.82rem;color:var(--muted)">Security Analyst</p><p style="font-weight:700;font-size:0.95rem;color:var(--cyan)">R35,000 – R60,000<span style="font-size:0.75rem;font-weight:400;color:var(--muted)">/mo</span></p></div><div class="salary-bar-wrap"><div class="salary-bar" data-width="46%"></div></div></div>
+<div class="salary-row"><div style="min-width:220px"><p style="font-size:0.82rem;color:var(--muted)">Senior SOC / IR Analyst</p><p style="font-weight:700;font-size:0.95rem;color:var(--cyan)">R55,000 – R85,000<span style="font-size:0.75rem;font-weight:400;color:var(--muted)">/mo</span></p></div><div class="salary-bar-wrap"><div class="salary-bar" data-width="64%"></div></div></div>
+<div class="salary-row"><div style="min-width:220px"><p style="font-size:0.82rem;color:var(--muted)">Cloud Security Engineer</p><p style="font-weight:700;font-size:0.95rem;color:var(--cyan)">R70,000 – R120,000<span style="font-size:0.75rem;font-weight:400;color:var(--muted)">/mo</span></p></div><div class="salary-bar-wrap"><div class="salary-bar" data-width="82%"></div></div></div>
+<div class="salary-row" style="border:none"><div style="min-width:220px"><p style="font-size:0.82rem;color:var(--muted)">CISO / Security Manager</p><p style="font-weight:700;font-size:0.95rem;color:var(--cyan)">R120,000 – R200,000+<span style="font-size:0.75rem;font-weight:400;color:var(--muted)">/mo</span></p></div><div class="salary-bar-wrap"><div class="salary-bar" data-width="100%"></div></div></div>
+</div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section style="padding:5rem 1.5rem" class="reveal">
+<div style="max-width:960px;margin:0 auto">
+<p class="label" style="margin-bottom:0.75rem">Who it's for</p>
+<h2 class="headline" style="margin-bottom:3rem">This guide was written for you if…</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem">
+<div class="card" style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--cyan);font-size:1.3rem;flex-shrink:0">✓</span><p style="color:var(--muted);font-size:0.95rem">You have <strong style="color:var(--ice)">no IT background</strong> — helpdesk, call centre, admin, cashier — and want to change careers</p></div>
+<div class="card" style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--cyan);font-size:1.3rem;flex-shrink:0">✓</span><p style="color:var(--muted);font-size:0.95rem">You <strong style="color:var(--ice)">don't have a university degree</strong> and thought cybersecurity was out of reach</p></div>
+<div class="card" style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--cyan);font-size:1.3rem;flex-shrink:0">✓</span><p style="color:var(--muted);font-size:0.95rem">You're earning <strong style="color:var(--ice)">under R15,000/month</strong> and need a real path to doubling or tripling your income</p></div>
+<div class="card" style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--cyan);font-size:1.3rem;flex-shrink:0">✓</span><p style="color:var(--muted);font-size:0.95rem">You've watched YouTube videos and feel <strong style="color:var(--ice)">overwhelmed</strong> — you need a clear system, not more content</p></div>
+<div class="card" style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--cyan);font-size:1.3rem;flex-shrink:0">✓</span><p style="color:var(--muted);font-size:0.95rem">You want to <strong style="color:var(--ice)">work remotely for international companies</strong> and earn in USD from South Africa</p></div>
+<div class="card" style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--cyan);font-size:1.3rem;flex-shrink:0">✓</span><p style="color:var(--muted);font-size:0.95rem">You can commit <strong style="color:var(--ice)">1–2 hours per day</strong> and want to know exactly what to do with that time</p></div>
+</div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section style="padding:5rem 1.5rem" class="reveal">
+<div style="max-width:960px;margin:0 auto">
+<p class="label" style="margin-bottom:0.75rem">Inside the guide</p>
+<h2 class="headline" style="margin-bottom:0.5rem">Your first 7 days — mapped out exactly</h2>
+<p style="color:var(--muted);margin-bottom:2rem;font-size:0.97rem">The full 30-day planner covers every single day of Month 1. Here's a preview of Week 1.</p>
+<div class="card" style="padding:0;overflow:hidden">
+<div style="background:var(--mid);padding:0.7rem 1.25rem"><p style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;color:var(--cyan)">WEEK 1 — COMPUTER BASICS &amp; WINDOWS (Days 1–7)</p></div>
+<div style="overflow-x:auto">
+<table style="width:100%;border-collapse:collapse;font-size:0.88rem">
+<thead><tr style="border-bottom:1px solid var(--border)"><th style="padding:0.7rem 1rem;text-align:left;color:var(--muted);font-weight:600;white-space:nowrap">Day</th><th style="padding:0.7rem 1rem;text-align:left;color:var(--muted);font-weight:600">Focus</th><th style="padding:0.7rem 1rem;text-align:left;color:var(--muted);font-weight:600">Task</th><th style="padding:0.7rem 1rem;text-align:left;color:var(--muted);font-weight:600;white-space:nowrap">Time</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(0,180,216,0.07)"><td style="padding:0.7rem 1rem;color:var(--cyan);font-weight:700">1</td><td style="padding:0.7rem 1rem;color:var(--ice);font-weight:600">Computer Basics</td><td style="padding:0.7rem 1rem;color:var(--muted)">Watch freeCodeCamp Computer Basics playlist. Take notes on CPU, RAM, storage.</td><td style="padding:0.7rem 1rem;color:var(--muted);white-space:nowrap">90 min</td></tr>
+<tr style="border-bottom:1px solid rgba(0,180,216,0.07);background:rgba(0,180,216,0.03)"><td style="padding:0.7rem 1rem;color:var(--cyan);font-weight:700">2</td><td style="padding:0.7rem 1rem;color:var(--ice);font-weight:600">Windows File System</td><td style="padding:0.7rem 1rem;color:var(--muted)">Explore C: drive. Create, rename, move folders using Explorer and Command Prompt.</td><td style="padding:0.7rem 1rem;color:var(--muted);white-space:nowrap">90 min</td></tr>
+<tr style="border-bottom:1px solid rgba(0,180,216,0.07)"><td style="padding:0.7rem 1rem;color:var(--cyan);font-weight:700">3</td><td style="padding:0.7rem 1rem;color:var(--ice);font-weight:600">Windows CLI</td><td style="padding:0.7rem 1rem;color:var(--muted)">Practise: dir, cd, mkdir, del, copy, ipconfig, ping. No GUI.</td><td style="padding:0.7rem 1rem;color:var(--muted);white-space:nowrap">90 min</td></tr>
+<tr style="border-bottom:1px solid rgba(0,180,216,0.07);background:rgba(0,180,216,0.03)"><td style="padding:0.7rem 1rem;color:var(--cyan);font-weight:700">4</td><td style="padding:0.7rem 1rem;color:var(--ice);font-weight:600">Computer Basics</td><td style="padding:0.7rem 1rem;color:var(--muted)">Professor Messer CompTIA IT Fundamentals on YouTube. Quiz yourself on every component.</td><td style="padding:0.7rem 1rem;color:var(--muted);white-space:nowrap">90 min</td></tr>
+<tr style="border-bottom:1px solid rgba(0,180,216,0.07)"><td style="padding:0.7rem 1rem;color:var(--cyan);font-weight:700">5</td><td style="padding:0.7rem 1rem;color:var(--ice);font-weight:600">Review + Practice</td><td style="padding:0.7rem 1rem;color:var(--muted)">Navigate your entire Windows system using only the command line. No mouse.</td><td style="padding:0.7rem 1rem;color:var(--muted);white-space:nowrap">90 min</td></tr>
+<tr style="border-bottom:1px solid rgba(0,180,216,0.07);background:rgba(0,180,216,0.03)"><td style="padding:0.7rem 1rem;color:var(--cyan);font-weight:700">6</td><td style="padding:0.7rem 1rem;color:var(--ice);font-weight:600">VirtualBox Install</td><td style="padding:0.7rem 1rem;color:var(--muted)">Download and install VirtualBox. Watch setup guide. Understand what a VM is.</td><td style="padding:0.7rem 1rem;color:var(--muted);white-space:nowrap">90 min</td></tr>
+<tr><td style="padding:0.7rem 1rem;color:var(--cyan);font-weight:700">7</td><td style="padding:0.7rem 1rem;color:var(--ice);font-weight:600">Week 1 Review</td><td style="padding:0.7rem 1rem;color:var(--muted)">Review all notes. Can you explain hardware and navigate Windows CLI confidently?</td><td style="padding:0.7rem 1rem;color:var(--muted);white-space:nowrap">60 min</td></tr>
+</tbody>
+</table>
+</div>
+<div style="padding:1rem 1.25rem;border-top:1px solid var(--border);text-align:center"><p style="font-size:0.85rem;color:var(--muted)">Days 8–30 and Weeks 2–4 are in the full guide ↓</p></div>
+</div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section style="padding:5rem 1.5rem" class="reveal">
+<div style="max-width:680px;margin:0 auto">
+<p class="label" style="margin-bottom:0.75rem">Common questions</p>
+<h2 class="headline" style="margin-bottom:2.5rem">Everything you're wondering</h2>
+<div id="faq">
+<div class="faq-item"><button class="faq-q">Do I really not need a degree? <span class="faq-icon">+</span></button><div class="faq-a">Genuinely, no. South Africa's biggest employers — Absa, Standard Bank, Vodacom, Telkom — hire entry-level cybersecurity staff based on certifications and demonstrable skills, not degrees. Many successful professionals started in IT helpdesk or call centres. What matters is your CompTIA Security+ and a GitHub portfolio showing you can do the work.</div></div>
+<div class="faq-item"><button class="faq-q">How much does it actually cost to get started? <span class="faq-icon">+</span></button><div class="faq-a">Almost nothing for the first 3–4 months. VirtualBox, Ubuntu, Kali Linux, TryHackMe (free tier), HackTheBox (free tier), and Professor Messer's YouTube course are all free. Your first paid expense is the CompTIA Security+ exam at approximately R7,500–R9,000 — but that's months away, giving you time to save while you study.</div></div>
+<div class="faq-item"><button class="faq-q">What if load shedding disrupts my studies? <span class="faq-icon">+</span></button><div class="faq-a">The guide specifically addresses this. VulnHub machines run completely offline. TryHackMe rooms can be downloaded in advance. Linux command line practice happens entirely in your local VM. There's a section on using mobile data wisely and downloading large files during off-peak hours. Load shedding does not have to stop you.</div></div>
+<div class="faq-item"><button class="faq-q">I only have 1 hour per day. Is that enough? <span class="faq-icon">+</span></button><div class="faq-a">Yes, but extend the timeline. The guide assumes 1–2 hours per day for a 6–12 month path. If you can only do 1 hour consistently, plan for 12–18 months. What matters is consistency, not intensity. Slow progress genuinely beats no progress — the field will still be growing and undersupplied whenever you're ready.</div></div>
+<div class="faq-item"><button class="faq-q">What format is the guide and how do I get it? <span class="faq-icon">+</span></button><div class="faq-a">It's a 34-page PDF, instant download via Gumroad. After payment you'll receive an email with your download link immediately. No subscription, no account needed after purchase, no expiry on the download link.</div></div>
+</div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section style="padding:6rem 1.5rem 8rem" class="reveal" id="buy-section">
+<div style="max-width:640px;margin:0 auto;text-align:center">
+<p class="label" style="margin-bottom:1rem">Start today</p>
+<h2 class="display" style="margin-bottom:1.25rem">Your first role could be<br/><span class="cyan">6 months away.</span></h2>
+<p style="color:var(--muted);font-size:1.05rem;margin-bottom:2.5rem;line-height:1.7">South Africa needs cybersecurity professionals. The skills shortage is real, the salaries are real, and the path is right here. The only question is whether you start today or not.</p>
+<div style="margin-bottom:1.5rem">
+<a data-gumroad-action="buy" class="btn-buy" style="font-size:1.15rem;padding:1.15rem 2.8rem">Get the guide — $9 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;color:var(--muted);font-size:0.85rem;margin-bottom:2rem">
+<span>📄 34-page PDF</span><span>⚡ Instant download</span><span>🇿🇦 Built for South Africa</span><span>🔒 Secure checkout</span>
+</div>
+<p style="font-size:0.82rem;color:var(--muted);max-width:420px;margin:0 auto"><em>"The best time to start was yesterday. The second-best time is right now."</em></p>
+</div>
+</section>
+
+<div id="sticky-bar">
+<div><p style="font-weight:700;font-size:0.97rem">Cybersecurity Career Starter 2026</p><p style="font-size:0.8rem;color:var(--muted)">34-page SA roadmap · Instant PDF download</p></div>
+<a data-gumroad-action="buy" class="btn-buy" style="font-size:0.92rem;padding:0.75rem 1.6rem;flex-shrink:0">Get it — $9</a>
+</div>
+
+<script>
+(function(){
+  var groups=[
+    {cmd:'start-cybersecurity-journey.sh',res:'Phase 1 complete — foundations built'},
+    {cmd:'enrol-tryhackme --path beginner',res:'47 rooms completed · rank climbing'},
+    {cmd:'book-exam --cert security-plus',res:'Passed SY0-701 · score 812/900'}
+  ];
+  var cmdEls=['t-line1','t-line2','t-line3'],pEls=['','t-p2','t-p3'];
+  var cur=document.getElementById('t-cursor-line'),g=0;
+  function type(el,s,spd,done){var i=0;(function t(){el.textContent=s.slice(0,i++);i<=s.length?setTimeout(t,spd+Math.random()*spd*0.4):done&&done()})()}
+  function next(){
+    if(g>=3){cur.style.display='';return}
+    var el=document.getElementById(cmdEls[g]);
+    if(pEls[g])document.getElementById(pEls[g]).style.display='';
+    type(el,groups[g].cmd,55,function(){
+      setTimeout(function(){
+        var r=document.createElement('div');r.className='terminal-line';r.style.color='#8BAC94';
+        el.parentNode.insertBefore(r,el.nextSibling);
+        type(r,'✓ '+groups[g].res,22,function(){g++;setTimeout(next,500)});
+      },250);
+    });
+  }
+  setTimeout(next,700);
+})();
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target)}})},{threshold:0.1});
+  els.forEach(function(el){io.observe(el)});
+})();
+(function(){
+  var bars=document.querySelectorAll('.salary-bar');
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){bars.forEach(function(b){b.style.width=b.dataset.width});io.disconnect()}},{threshold:0.3});
+  var s=document.getElementById('salary-section');if(s)io.observe(s);
+})();
+(function(){
+  var bar=document.getElementById('sticky-bar');
+  var hero=document.querySelector('section');
+  var io=new IntersectionObserver(function(e){bar.classList.toggle('visible',!e[0].isIntersecting)},{threshold:0});
+  io.observe(hero);
+})();
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.faq-item');
+    var open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open')});
+    if(!open)item.classList.add('open');
+  });
+});
+</script>
+</div>
+</body>
+</html>
